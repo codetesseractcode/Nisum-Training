@@ -1,0 +1,4 @@
+{
+    // Use the Day 2 folder itself as the Java source root, so that p31_packages is found
+    "java.project.sourcePaths": ["."]
+}
