@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+  <display-name>Servlet Demo Application</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <context-param>
+    <param-name>basePath</param-name>
+    <param-value>/demo</param-value>
+  </context-param>
+
+  <!-- The @WebServlet annotation in the servlet class replaces this configuration,
+       but including it for completeness -->
+  <servlet>
+    <servlet-name>WelcomeServlet</servlet-name>
+    <servlet-class>com.nisum.WelcomeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>WelcomeServlet</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>WelcomeServletMini</servlet-name>
+    <servlet-class>com.nisum.WelcomeServletMini</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>WelcomeServletMini</servlet-name>
+    <url-pattern>/welcome-mini</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.nisum.UserServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/users</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DateTimeServlet</servlet-name>
+    <servlet-class>com.nisum.DateTimeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DateTimeServlet</servlet-name>
+    <url-pattern>/datetime</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CookieServlet</servlet-name>
+    <servlet-class>com.nisum.CookieServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CookieServlet</servlet-name>
+    <url-pattern>/cookie</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ConfigServlet</servlet-name>
+    <servlet-class>com.nisum.ConfigServlet</servlet-class>
+    <init-param>
+      <param-name>appName</param-name>
+      <param-value>MyApp</param-value>
+    </init-param>
+    <init-param>
+      <param-name>appVersion</param-name>
+      <param-value>1.0</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ConfigServlet</servlet-name>
+    <url-pattern>/config</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ContextParamServlet</servlet-name>
+    <servlet-class>com.nisum.ContextParamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContextParamServlet</servlet-name>
+    <url-pattern>/context-param</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.nisum.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginServletMini</servlet-name>
+    <servlet-class>com.nisum.LoginServletMini</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServletMini</servlet-name>
+    <url-pattern>/login-mini</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RedirectServlet</servlet-name>
+    <servlet-class>com.nisum.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RedirectServlet</servlet-name>
+    <url-pattern>/redirect</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RequestHeadersServlet</servlet-name>
+    <servlet-class>com.nisum.RequestHeadersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestHeadersServlet</servlet-name>
+    <url-pattern>/headers</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SetSessionServlet</servlet-name>
+    <servlet-class>com.nisum.SetSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SetSessionServlet</servlet-name>
+    <url-pattern>/set-session</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ReadSessionServlet</servlet-name>
+    <servlet-class>com.nisum.ReadSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadSessionServlet</servlet-name>
+    <url-pattern>/read-session</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FeedbackServlet</servlet-name>
+    <servlet-class>com.nisum.FeedbackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FeedbackServlet</servlet-name>
+    <url-pattern>/feedback</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FeedbacksServlet</servlet-name>
+    <servlet-class>com.nisum.FeedbacksServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FeedbacksServlet</servlet-name>
+    <url-pattern>/feedbacks</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>LoggingFilter</filter-name>
+    <filter-class>com.nisum.LoggingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoggingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>Page1Servlet</servlet-name>
+    <servlet-class>com.nisum.Page1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Page1Servlet</servlet-name>
+    <url-pattern>/page1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Page2Servlet</servlet-name>
+    <servlet-class>com.nisum.Page2Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Page2Servlet</servlet-name>
+    <url-pattern>/page2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SummaryServlet</servlet-name>
+    <servlet-class>com.nisum.SummaryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SummaryServlet</servlet-name>
+    <url-pattern>/summary</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ForwardingServlet</servlet-name>
+    <servlet-class>com.nisum.ForwardingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForwardingServlet</servlet-name>
+    <url-pattern>/forward</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TargetServlet</servlet-name>
+    <servlet-class>com.nisum.TargetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TargetServlet</servlet-name>
+    <url-pattern>/target</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserFormValidationServlet</servlet-name>
+    <servlet-class>com.nisum.UserFormValidationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserFormValidationServlet</servlet-name>
+    <url-pattern>/validate-user-form</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LogoutServletMini</servlet-name>
+    <servlet-class>com.nisum.LogoutServletMini</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServletMini</servlet-name>
+    <url-pattern>/logout-mini</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>StudentListServlet</servlet-name>
+    <servlet-class>com.nisum.StudentListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentListServlet</servlet-name>
+    <url-pattern>/students</url-pattern>
+  </servlet-mapping>
+</web-app>
