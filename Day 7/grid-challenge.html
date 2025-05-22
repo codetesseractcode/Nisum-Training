@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+            grid-template-rows: repeat(2, 1fr); /* 2 rows of equal height */
+            gap: 10px; /* 10px gap between grid items */
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .item {
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        .explanation {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid Challenge</h1>
+    
+    <div class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    
+    <div class="explanation">
+        <h2>Explanation:</h2>
+        <p>This grid is created using CSS Grid Layout with the following properties:</p>
+        <ul>
+            <li><code>display: grid;</code> - Sets the container to use CSS Grid layout</li>
+            <li><code>grid-template-columns: repeat(3, 1fr);</code> - Creates 3 columns of equal width</li>
+            <li><code>grid-template-rows: repeat(2, 1fr);</code> - Creates 2 rows of equal height</li>
+            <li><code>gap: 10px;</code> - Sets the gap between grid items to 10px</li>
+        </ul>
+        <p>The result is a 3x2 grid with 6 equal-sized boxes and 10px gaps between them.</p>
+    </div>
+</body>
+</html>

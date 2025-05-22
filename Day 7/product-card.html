@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .buy-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .buy-button:hover {
+            background-color: #2980b9;
+        }
+        
+        .explanation {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>    <div>
+        <div class="product-card">
+            <img src="images/product.jpg" alt="Product Image" class="product-image">
+            <div class="product-info">
+                <h2 class="product-title">Premium Headphones</h2>
+                <p class="product-description">These high-quality wireless headphones provide crystal clear sound and up to 20 hours of battery life. Perfect for music lovers!</p>
+                <p class="product-price">$149.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+        
+        <div class="explanation">
+            <h2>Product Card Explanation:</h2>
+            <p>This product card includes all the required elements:</p>
+            <ul>
+                <li>Product image (<code>&lt;img&gt;</code>) - Visual representation of the product</li>
+                <li>Title (<code>&lt;h2&gt;</code>) - Clear product name</li>
+                <li>Description (<code>&lt;p&gt;</code>) - Brief product description</li>
+                <li>Price - Prominently displayed cost of the product</li>
+                <li>"Buy Now" button - Call to action</li>
+            </ul>
+            <p>The card also includes some additional features:</p>
+            <ul>
+                <li>Hover effect to lift the card</li>
+                <li>Button color change on hover</li>
+                <li>Shadow effect for depth</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

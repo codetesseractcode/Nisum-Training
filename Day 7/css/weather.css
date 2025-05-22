@@ -1,0 +1,264 @@
+/* Weather App Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.weather-app {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.search-bar {
+    display: flex;
+    width: 300px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Current Weather Section */
+.current-weather {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city-info h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.temp-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-right: 15px;
+}
+
+.weather-icon i {
+    font-size: 3rem;
+    color: #f39c12;
+}
+
+.weather-desc p {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+/* Weather Details Section */
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.detail-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(25% - 15px);
+    text-align: center;
+}
+
+.detail-box h3 {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-box h3 i {
+    margin-right: 8px;
+    color: #3498db;
+}
+
+.detail-box p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Forecast Section */
+.weather-forecast {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-forecast h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-day {
+    text-align: center;
+    flex-basis: calc(20% - 10px);
+}
+
+.forecast-day h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.forecast-icon {
+    margin: 15px 0;
+}
+
+.forecast-icon i {
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+.forecast-temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #7f8c8d;
+    margin-top: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .app-header {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .search-bar {
+        width: 100%;
+    }
+    
+    .current-weather {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .city-info {
+        margin-bottom: 15px;
+    }
+    
+    .weather-info {
+        flex-direction: column;
+    }
+    
+    .temperature {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .weather-details {
+        flex-wrap: wrap;
+    }
+    
+    .detail-box {
+        flex-basis: calc(50% - 10px);
+        margin-bottom: 15px;
+    }
+    
+    .forecast-container {
+        flex-wrap: wrap;
+    }
+    
+    .forecast-day {
+        flex-basis: calc(33.33% - 10px);
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-box, .forecast-day {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        thead {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tbody tr:hover {
+            background-color: #e9f7fe;
+        }
+        
+        tfoot {
+            background-color: #ecf0f1;
+            font-weight: bold;
+        }
+        
+        .explanation {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Grades</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Smith</td>
+                <td>Mathematics</td>
+                <td>92</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Emma Johnson</td>
+                <td>Science</td>
+                <td>85</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>Michael Brown</td>
+                <td>History</td>
+                <td>78</td>
+                <td>C+</td>
+            </tr>
+            <tr>
+                <td>Sarah Davis</td>
+                <td>English</td>
+                <td>95</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>David Wilson</td>
+                <td>Computer Science</td>
+                <td>88</td>
+                <td>B+</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Class Average:</td>
+                <td>87.6</td>
+                <td>B+</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <div class="explanation">
+        <h2>Table Structure Explanation:</h2>
+        <p>This table of student grades demonstrates the use of proper HTML table elements:</p>
+        <ul>
+            <li><code>&lt;thead&gt;</code> - Contains the header row with column titles</li>
+            <li><code>&lt;tbody&gt;</code> - Contains the main data rows (student records)</li>
+            <li><code>&lt;tfoot&gt;</code> - Contains the footer row with summary information</li>
+        </ul>
+        <p>Additional features include:</p>
+        <ul>
+            <li>Alternating row colors for better readability</li>
+            <li>Hover effect on rows</li>
+            <li>Proper spacing and padding</li>
+            <li>Responsive design</li>
+        </ul>
+    </div>
+</body>
+</html>

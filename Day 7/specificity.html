@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        p {
+            color: red;
+        }
+        #main p {
+            color: blue;
+        }
+        div p.intro {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p class="intro">Test Paragraph</p>
+    </div>
+      <!-- Explanation -->
+    <div style="margin-top: 2rem; padding: 1rem; border: 1px solid #ddd; border-radius: 5px;">
+        <h2>Explanation:</h2>
+        <p>The text will be <span style="color: blue; font-weight: bold;">blue</span> because the selector <code>#main p</code> has the highest specificity.</p>
+        <p>Specificity calculation:</p>
+        <ul>
+            <li><code>p</code> = (0, 0, 0, 1) = 1</li>
+            <li><code>#main p</code> = (0, 1, 0, 1) = 101</li>
+            <li><code>div p.intro</code> = (0, 0, 1, 2) = 12</li>
+        </ul>
+        <p>Since <code>#main p</code> has the highest specificity value (101), the text will be blue.</p>
+    </div>
+</body>
+</html>

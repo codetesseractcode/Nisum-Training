@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            /* Animation properties */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            /* Grow in size */
+            transform: scale(1.1);
+            /* Change background color */
+            background-color: #2980b9;
+        }
+        
+        .explanation {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            max-width: 500px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Hover Me</button>
+    
+    <div class="explanation">
+        <h2>Hover Animation Explanation:</h2>
+        <p>This button uses CSS transitions to create a smooth hover animation that:</p>
+        <ol>
+            <li>Increases the size of the button using transform: scale(1.1)</li>
+            <li>Changes the background color to a darker shade</li>
+            <li>Uses transition property with 0.3s duration and ease timing function to make the animation smooth</li>
+        </ol>
+    </div>
+</body>
+</html>
