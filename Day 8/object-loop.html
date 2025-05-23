@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Through an Object</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .object-display {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-radius: 4px;
+            border-left: 4px solid #8bc34a;
+        }
+        
+        .output-title {
+            margin-top: 0;
+            color: #689f38;
+        }
+        
+        .key-value {
+            padding: 5px;
+            margin-bottom: 5px;
+            background-color: #ffffff;
+            border-radius: 3px;
+        }
+        
+        .key {
+            font-weight: bold;
+            color: #1976d2;
+        }
+        
+        .value {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loop Through an Object</h1>
+        <p>Demonstrating how to loop through the key-value pairs of an object.</p>
+        
+        <div class="object-display">
+            <pre id="objectCode">const user = {
+  name: "Alice",
+  age: 25,
+  email: "alice@example.com"
+};</pre>
+        </div>
+        
+        <button id="loopBtn">Loop Through Object</button>
+        
+        <div id="output" class="output" style="display: none;">
+            <h3 class="output-title">Output:</h3>
+            <div id="keyValueContainer"></div>
+        </div>
+    </div>
+    
+    <script src="js/object-loop.js"></script>
+</body>
+</html>

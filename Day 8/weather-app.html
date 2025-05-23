@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="css/weather-app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="temperature">28°C</div>
+            <div class="location">Default Location</div>
+        </div>
+        <div class="right-section">
+            <div class="search-box">
+                <input type="text" placeholder="Enter country name..." id="countryInput">
+            </div>
+            <div class="weather-details">
+                <h2>Weather Details</h2>
+                <div class="detail-item">
+                    <span>Humidity</span>
+                    <span id="humidity">65%</span>
+                </div>
+                <div class="detail-item">
+                    <span>Wind</span>
+                    <span id="wind">8 km/h</span>
+                </div>
+                <div class="detail-item">
+                    <span>Precipitation</span>
+                    <span id="precipitation">2%</span>
+                </div>
+                <div class="detail-item">
+                    <span>UV Index</span>
+                    <span id="uvIndex">Moderate</span>
+                </div>
+            </div>
+        </div>
+    </div>    <script src="js/weather-app.js"></script>
+</body>
+</html>

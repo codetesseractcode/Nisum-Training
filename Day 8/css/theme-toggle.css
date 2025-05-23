@@ -1,0 +1,125 @@
+/* Styles for Light/Dark Mode Toggle */
+
+:root {
+    /* Light mode variables */
+    --light-bg: #f5f5f5;
+    --light-text: #333333;
+    --light-card-bg: #ffffff;
+    --light-card-shadow: rgba(0, 0, 0, 0.1);
+    --light-border: #e0e0e0;
+    
+    /* Dark mode variables */
+    --dark-bg: #121212;
+    --dark-text: #e0e0e0;
+    --dark-card-bg: #1e1e1e;
+    --dark-card-shadow: rgba(0, 0, 0, 0.4);
+    --dark-border: #333333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode (default) */
+body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid;
+}
+
+/* Light mode header border */
+body.light-mode header {
+    border-bottom-color: var(--light-border);
+}
+
+/* Dark mode header border */
+body.dark-mode header {
+    border-bottom-color: var(--dark-border);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Light mode button */
+body.light-mode .theme-toggle-btn {
+    border-color: var(--light-border);
+    color: var(--light-text);
+}
+
+/* Dark mode button */
+body.dark-mode .theme-toggle-btn {
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+.toggle-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.card {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px;
+}
+
+/* Light mode cards */
+body.light-mode .card {
+    background-color: var(--light-card-bg);
+    box-shadow: 0 2px 4px var(--light-card-shadow);
+}
+
+/* Dark mode cards */
+body.dark-mode .card {
+    background-color: var(--dark-card-bg);
+    box-shadow: 0 2px 4px var(--dark-card-shadow);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}

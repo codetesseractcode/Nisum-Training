@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Challenge</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Array Methods Challenge</h1>
+        <p>Filter and map an array of numbers to get squares of even numbers</p>
+        
+        <div style="margin-top: 20px;">
+            <label for="numbers">Enter numbers (comma-separated):</label>
+            <input type="text" id="numbers" placeholder="e.g., 1,2,3,4,5,6" value="1,2,3,4,5,6,7,8,9,10">
+            <button id="processBtn" style="margin-top: 10px;">Process Numbers</button>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <h3>Results:</h3>
+            <div class="result-box" style="margin-top: 10px;">
+                <p><strong>Original Array:</strong> <span id="original"></span></p>
+                <p><strong>Even Numbers:</strong> <span id="evenOnly"></span></p>
+                <p><strong>Squares of Even Numbers:</strong> <span id="squaredEvens"></span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/array-methods.js"></script>
+</body>
+</html>

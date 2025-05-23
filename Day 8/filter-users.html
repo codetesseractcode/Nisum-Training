@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Users by City</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .user-item {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border-left: 4px solid #4CAF50;
+        }
+        .user-name {
+            font-weight: bold;
+        }
+        .user-details {
+            margin-top: 5px;
+            color: #666;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .error {
+            padding: 10px;
+            background-color: #ffebee;
+            color: #d32f2f;
+            border-left: 4px solid #d32f2f;
+        }
+        select {
+            padding: 8px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Filter Users by City</h1>
+        <button id="fetchBtn">Fetch Users</button>
+        
+        <div id="filterContainer" style="margin-top: 20px; display: none;">
+            <label for="cityFilter">Filter by City:</label>
+            <select id="cityFilter">
+                <option value="">All Cities</option>
+            </select>
+        </div>
+        
+        <div id="userContainer" style="margin-top: 20px;">
+            <p class="loading">Click the button to fetch users</p>
+        </div>
+    </div>
+    
+    <script src="js/filter-users.js"></script>
+</body>
+</html>
