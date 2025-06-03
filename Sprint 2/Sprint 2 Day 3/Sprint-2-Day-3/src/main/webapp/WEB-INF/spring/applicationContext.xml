@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Database Configuration -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/text_editor_db?createDatabaseIfNotExist=true" />
+        <property name="username" value="root" />
+        <property name="password" value="password" />
+    </bean>
+
+    <!-- DAO Beans -->
+    <bean id="documentDAO" class="com.nisum.dao.MySqlDocumentDAO">
+        <constructor-arg ref="dataSource" />
+    </bean>
+
+    <!-- Define the SpellChecker bean -->
+    <bean id="spellChecker" class="com.nisum.model.SimpleSpellChecker" />
+
+    <!-- TextEditor with Constructor Injection -->
+    <bean id="textEditorConstructor" class="com.nisum.model.TextEditor">
+        <constructor-arg ref="spellChecker" />
+        <property name="name" value="Constructor Injected Editor" />
+    </bean>
+
+    <!-- TextEditor with Setter Injection -->
+    <bean id="textEditorSetter" class="com.nisum.model.TextEditor">
+        <property name="spellChecker" ref="spellChecker" />
+        <property name="name" value="Setter Injected Editor" />
+    </bean>
+
+    <!-- TextEditor with Full Dependency Injection -->
+    <bean id="completeTextEditor" class="com.nisum.model.TextEditor">
+        <constructor-arg ref="spellChecker" />
+        <constructor-arg ref="documentDAO" />
+        <property name="name" value="Complete Text Editor" />
+    </bean>
+
+</beans>
