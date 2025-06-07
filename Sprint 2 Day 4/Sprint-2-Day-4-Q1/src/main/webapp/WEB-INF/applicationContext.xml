@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable component scanning for our application packages -->
+    <context:component-scan base-package="com.nisum.beans">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- Bean definitions with different scopes will go here -->
+
+    <!-- Singleton scope bean (default) -->
+    <bean id="singletonBean" class="com.nisum.beans.ScopeBean">
+        <property name="scopeName" value="singleton"/>
+    </bean>
+
+    <!-- Prototype scope bean -->
+    <bean id="prototypeBean" class="com.nisum.beans.ScopeBean" scope="prototype">
+        <property name="scopeName" value="prototype"/>
+    </bean>
+
+    <!-- The request, session and global-session scopes are configured in spring-mvc.xml -->
+
+</beans>
