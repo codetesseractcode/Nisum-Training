@@ -1,12 +1,5 @@
 /**
  * Question 22: Shared Counter with Synchronization
- * 
- * Explanation:
- * This program demonstrates the race condition problem that occurs when multiple threads
- * access shared data without proper synchronization. It shows:
- * 1. Unsynchronized version that produces incorrect results
- * 2. Synchronized version that fixes the race condition
- * 3. Various synchronization techniques (synchronized methods, blocks, AtomicInteger)
  */
 
 import java.util.concurrent.atomic.AtomicInteger;
