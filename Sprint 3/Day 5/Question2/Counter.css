@@ -1,0 +1,73 @@
+.counter-container {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.counter-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.increment-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.increment-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.decrement-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.decrement-btn:hover:not(:disabled) {
+  background-color: #da190b;
+  transform: translateY(-2px);
+}
+
+.decrement-btn:disabled {
+  background-color: #cccccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reset-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #0b7dda;
+  transform: translateY(-2px);
+}
+
+.button-group button:active {
+  transform: translateY(0);
+}

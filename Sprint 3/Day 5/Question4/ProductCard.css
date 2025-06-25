@@ -1,0 +1,56 @@
+/* External CSS styling for ProductCard component */
+
+/* This class works alongside inline styles */
+.product-card-external {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effects using external CSS */
+.product-card-external:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+  background-color: #ffffff !important;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .product-card-external {
+    max-width: 100% !important;
+    margin: 10px 0 !important;
+  }
+}
+
+/* Additional styling that can't be easily done with inline styles */
+.product-card-external::before {
+  content: '🛍️';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-external {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation for when component mounts */
+.product-card-external {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

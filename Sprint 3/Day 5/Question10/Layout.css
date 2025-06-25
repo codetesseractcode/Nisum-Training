@@ -1,0 +1,295 @@
+/* Layout Component - CSS Grid Implementation */
+
+/* Main layout container using CSS Grid */
+.layout-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header section */
+.layout-header {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-info {
+  display: grid;
+  gap: 8px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #3498db, #e74c3c, #f39c12);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.site-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.header-actions {
+  display: grid;
+  place-items: center;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Main content section */
+.layout-main {
+  grid-area: main;
+  display: grid;
+  padding: 20px 0;
+  min-height: 0; /* Important for grid item to shrink */
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+
+/* Footer section */
+.layout-footer {
+  grid-area: footer;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 40px 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3498db;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.footer-section li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.footer-section a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.social-links span:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 30px;
+  border-top: 1px solid;
+  border-color: inherit;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 15px 25px;
+    gap: 15px;
+  }
+  
+  .site-title {
+    font-size: 1.8rem;
+  }
+  
+  .site-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .footer-content {
+    padding: 30px 25px 15px;
+    gap: 25px;
+  }
+  
+  .main-content {
+    padding: 0 15px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .layout-container {
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  .header-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  
+  .site-title {
+    font-size: 1.6rem;
+  }
+  
+  .site-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .theme-toggle-btn {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 25px 20px 15px;
+    gap: 20px;
+  }
+  
+  .social-links {
+    justify-content: center;
+    max-width: 200px;
+    margin: 10px auto 0;
+  }
+  
+  .main-content {
+    padding: 0 10px;
+  }
+  
+  .footer-bottom {
+    padding: 15px 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+  
+  .site-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+  
+  .theme-toggle-btn {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* Dark theme specific adjustments */
+.layout-container[style*="background-color: rgb(26, 26, 26)"] .footer-bottom {
+  border-top-color: #34495e;
+}
+
+/* Animation for layout loading */
+.layout-container {
+  animation: layoutFadeIn 0.5s ease-out;
+}
+
+@keyframes layoutFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Print styles */
+@media print {
+  .layout-header,
+  .layout-footer {
+    display: none;
+  }
+  
+  .layout-main {
+    grid-area: auto;
+  }
+  
+  .layout-container {
+    grid-template-areas: "main";
+    grid-template-rows: 1fr;
+  }
+}

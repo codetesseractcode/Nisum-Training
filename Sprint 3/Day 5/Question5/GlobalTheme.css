@@ -1,0 +1,70 @@
+/* Global Theme Styles */
+
+/* Override default React logo animation for dark theme */
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  filter: brightness(1);
+  transition: filter 0.3s ease;
+}
+
+/* Dark theme adjustments */
+.App[style*="background-color: rgb(26, 26, 26)"] .App-logo {
+  filter: brightness(1.5) hue-rotate(45deg);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark theme scrollbar */
+.App[style*="background-color: rgb(26, 26, 26)"] ::-webkit-scrollbar-track {
+  background: #2c3e50;
+}
+
+.App[style*="background-color: rgb(26, 26, 26)"] ::-webkit-scrollbar-thumb {
+  background: #5d6d7e;
+}
+
+.App[style*="background-color: rgb(26, 26, 26)"] ::-webkit-scrollbar-thumb:hover {
+  background: #7f8c8d;
+}
+
+/* Selection highlighting */
+::selection {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Dark theme selection */
+.App[style*="background-color: rgb(26, 26, 26)"] ::selection {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

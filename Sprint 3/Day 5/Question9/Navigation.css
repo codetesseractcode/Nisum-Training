@@ -1,0 +1,214 @@
+/* Navigation Component Styles */
+.navigation-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Main navigation container using Flexbox */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo section */
+.nav-logo {
+  flex: 0 0 auto;
+}
+
+/* Navigation items container using Flexbox */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+/* Individual nav item styling */
+.nav-item {
+  position: relative;
+  white-space: nowrap;
+  min-width: -webkit-fill-available;
+  min-width: fit-content;
+}
+
+.nav-item:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Current page indicator */
+.current-page-indicator {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hamburger menu - hidden by default */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
+}
+
+.hamburger-menu:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 15px 20px;
+    position: relative;
+  }
+  
+  /* Show hamburger menu on mobile */
+  .hamburger-menu {
+    display: flex;
+    order: 3;
+  }
+  
+  /* Hide navigation items by default on mobile */
+  .nav-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: inherit;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
+    gap: 15px;
+    z-index: 999;
+  }
+  
+  /* Show navigation items when mobile menu is open */
+  .nav-items-mobile-open {
+    display: flex;
+  }
+  
+  /* Mobile nav items styling */
+  .nav-items-mobile-open .nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+  
+  /* Adjust logo for mobile */
+  .nav-logo h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile current page indicator */
+  .current-page-indicator {
+    margin-top: 10px;
+  }
+  
+  .current-page-indicator span {
+    padding: 6px 15px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .nav-container {
+    padding: 15px 25px;
+  }
+  
+  .nav-items {
+    gap: 8px;
+  }
+  
+  .nav-item {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Large screen optimization */
+@media (min-width: 1400px) {
+  .nav-container {
+    padding: 20px 40px;
+  }
+  
+  .nav-items {
+    gap: 15px;
+  }
+  
+  .nav-item {
+    padding: 14px 24px;
+    font-size: 1.1rem;
+  }
+  
+  .nav-logo h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Animation for mobile menu */
+.nav-items-mobile-open {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .nav-item,
+  .hamburger-menu,
+  .navigation-bar {
+    transition: none;
+  }
+  
+  .nav-items-mobile-open {
+    animation: none;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.nav-item:focus-visible {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+.hamburger-menu:focus-visible {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .nav-item {
+    border: 1px solid currentColor;
+  }
+  
+  .navigation-bar {
+    border-bottom-width: 3px;
+  }
+}

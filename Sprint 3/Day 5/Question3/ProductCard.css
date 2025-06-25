@@ -1,0 +1,38 @@
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 400px;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card h2 {
+  color: #333;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.product-card p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.product-card p:first-of-type {
+  font-weight: 600;
+  color: #2c5aa0;
+  font-size: 1.1rem;
+}
+
+.product-card p:last-of-type {
+  color: #666;
+  font-size: 0.95rem;
+}
