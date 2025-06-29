@@ -1,0 +1,185 @@
+.navigation {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.nav-logo:hover {
+  color: #0056b3;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #495057;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+
+.nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.wishlist-nav-link {
+  position: relative;
+}
+
+.wishlist-icon {
+  font-size: 1.1rem;
+}
+
+.nav-text {
+  font-size: 1rem;
+}
+
+.wishlist-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.nav-link.active .wishlist-badge {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #007bff;
+}
+
+/* Dark theme support */
+body.dark .navigation {
+  background-color: #2d3748;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .nav-logo {
+  color: #4dabf7;
+}
+
+body.dark .nav-logo:hover {
+  color: #74c0fc;
+}
+
+body.dark .nav-link {
+  color: #e2e8f0;
+}
+
+body.dark .nav-link:hover {
+  background-color: rgba(77, 171, 247, 0.1);
+  color: #4dabf7;
+}
+
+body.dark .nav-link.active {
+  background-color: #4dabf7;
+  color: #1a202c;
+}
+
+body.dark .wishlist-badge {
+  background-color: #fc8181;
+}
+
+body.dark .nav-link.active .wishlist-badge {
+  background-color: rgba(26, 32, 44, 0.9);
+  color: #4dabf7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 15px;
+    height: 56px;
+  }
+  
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+  
+  .nav-links {
+    gap: 16px;
+  }
+  
+  .nav-link {
+    padding: 6px 12px;
+  }
+  
+  .nav-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 10px;
+  }
+  
+  .nav-links {
+    gap: 12px;
+  }
+  
+  .nav-link {
+    padding: 6px 8px;
+  }
+  
+  .nav-text {
+    display: none;
+  }
+  
+  .wishlist-icon {
+    font-size: 1.2rem;
+  }
+  
+  .wishlist-badge {
+    top: -6px;
+    right: -6px;
+  }
+}

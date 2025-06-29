@@ -1,0 +1,163 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 14 Pro",
+      "category": "Electronics",
+      "price": 999,
+      "description": "Latest iPhone with Pro camera system",
+      "image": "https://picsum.photos/200/200?random=1",
+      "stock": 15,
+      "detailedDescription": "The iPhone 14 Pro features a 48MP main camera, A16 Bionic chip, and Dynamic Island. Available in Space Black, Silver, Gold, and Deep Purple. Includes ProRAW and ProRes recording capabilities.",
+      "specifications": {
+        "Display": "6.1-inch Super Retina XDR",
+        "Chip": "A16 Bionic",
+        "Camera": "48MP Main, 12MP Ultra Wide, 12MP Telephoto",
+        "Storage": "128GB, 256GB, 512GB, 1TB",
+        "Battery": "Up to 23 hours video playback"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S23",
+      "category": "Electronics",
+      "price": 899,
+      "description": "Flagship Android smartphone",
+      "image": "https://picsum.photos/200/200?random=2",
+      "stock": 8,
+      "detailedDescription": "Samsung Galaxy S23 with advanced AI-powered camera, Snapdragon 8 Gen 2 processor, and all-day battery. Features include 8K video recording, wireless charging, and IP68 water resistance.",
+      "specifications": {
+        "Display": "6.1-inch Dynamic AMOLED 2X",
+        "Processor": "Snapdragon 8 Gen 2",
+        "Camera": "50MP Main, 12MP Ultra Wide, 10MP Telephoto",
+        "Storage": "128GB, 256GB",
+        "Battery": "3900mAh with fast charging"
+      }
+    },
+    {
+      "id": 3,
+      "name": "MacBook Air M2",
+      "category": "Electronics",
+      "price": 1199,
+      "description": "Ultra-thin laptop with M2 chip",
+      "image": "https://picsum.photos/200/200?random=3",
+      "stock": 12,
+      "detailedDescription": "MacBook Air with Apple M2 chip delivers incredible performance and up to 18 hours of battery life. Features a stunning 13.6-inch Liquid Retina display and comes in four beautiful colors.",
+      "specifications": {
+        "Chip": "Apple M2 with 8-core CPU",
+        "Display": "13.6-inch Liquid Retina",
+        "Memory": "8GB, 16GB, 24GB unified memory",
+        "Storage": "256GB, 512GB, 1TB, 2TB SSD",
+        "Battery": "Up to 18 hours"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Jordan",
+      "category": "Fashion",
+      "price": 180,
+      "description": "Classic basketball sneakers",
+      "image": "https://picsum.photos/200/200?random=4",
+      "stock": 25
+    },
+    {
+      "id": 5,
+      "name": "Adidas Ultraboost",
+      "category": "Fashion",
+      "price": 150,
+      "description": "Premium running shoes",
+      "image": "https://picsum.photos/200/200?random=5",
+      "stock": 18
+    },
+    {
+      "id": 6,
+      "name": "Levi's 501 Jeans",
+      "category": "Fashion",
+      "price": 80,
+      "description": "Classic straight leg jeans",
+      "image": "https://picsum.photos/200/200?random=6",
+      "stock": 32
+    },
+    {
+      "id": 7,
+      "name": "Coffee Maker",
+      "category": "Home",
+      "price": 120,
+      "description": "Programmable drip coffee maker",
+      "image": "https://picsum.photos/200/200?random=7",
+      "stock": 14
+    },
+    {
+      "id": 8,
+      "name": "Vacuum Cleaner",
+      "category": "Home",
+      "price": 250,
+      "description": "Cordless stick vacuum",
+      "image": "https://picsum.photos/200/200?random=8",
+      "stock": 9
+    },
+    {
+      "id": 9,
+      "name": "Air Fryer",
+      "category": "Home",
+      "price": 90,
+      "description": "Compact air fryer for healthy cooking",
+      "image": "https://picsum.photos/200/200?random=9",
+      "stock": 22
+    },
+    {
+      "id": 10,
+      "name": "Yoga Mat",
+      "category": "Sports",
+      "price": 35,
+      "description": "Non-slip exercise mat",
+      "image": "https://picsum.photos/200/200?random=10",
+      "stock": 45
+    },
+    {
+      "id": 11,
+      "name": "Dumbbells Set",
+      "category": "Sports",
+      "price": 150,
+      "description": "Adjustable weight dumbbells",
+      "image": "https://picsum.photos/200/200?random=11",
+      "stock": 7
+    },
+    {
+      "id": 12,
+      "name": "Tennis Racket",
+      "category": "Sports",
+      "price": 75,
+      "description": "Professional grade tennis racket",
+      "image": "https://picsum.photos/200/200?random=12",
+      "stock": 16
+    },
+    {
+      "id": 13,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 200,
+      "description": "Noise-cancelling bluetooth headphones",
+      "image": "https://picsum.photos/200/200?random=13",
+      "stock": 11
+    },
+    {
+      "id": 14,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 300,
+      "description": "Fitness tracking smartwatch",
+      "image": "https://picsum.photos/200/200?random=14",
+      "stock": 20
+    },
+    {
+      "id": 15,
+      "name": "Designer Handbag",
+      "category": "Fashion",
+      "price": 450,
+      "description": "Luxury leather handbag",
+      "image": "https://picsum.photos/200/200?random=15",
+      "stock": 5
+    }
+  ]
+}
