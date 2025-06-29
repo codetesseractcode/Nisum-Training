@@ -1,0 +1,3 @@
+com\nisum\productDashboard\ProductDashboardApplicationTests.class
+com\nisum\productDashboard\integration\ProductDashboardAdvancedIntegrationTest.class
+com\nisum\productDashboard\integration\ProductControllerIntegrationTest.class
