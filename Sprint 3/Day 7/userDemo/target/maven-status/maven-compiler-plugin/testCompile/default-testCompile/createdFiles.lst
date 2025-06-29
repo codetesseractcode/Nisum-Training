@@ -1,0 +1,9 @@
+com\nisum\userDemo\UserTest$EqualityTests.class
+com\nisum\userDemo\UserServiceTest.class
+com\nisum\userDemo\validation\MinimumAgeValidatorTest$ValidateAgeTests.class
+com\nisum\userDemo\UserTest.class
+com\nisum\userDemo\UserDemoApplicationTests.class
+com\nisum\userDemo\UserServiceTest$ValidateAgeTests.class
+com\nisum\userDemo\validation\MinimumAgeValidatorTest.class
+com\nisum\userDemo\UserTest$ConstructorTests.class
+com\nisum\userDemo\UserTest$GetterTests.class
