@@ -1,0 +1,107 @@
+/* Base styles */
+.App {
+  text-align: left;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  padding-top: 80px; /* Space for fixed theme toggle */
+}
+
+/* Light theme styles */
+body.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.light .App {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Dark theme styles */
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .App {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+select:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+body.dark button:focus,
+body.dark input:focus,
+body.dark select:focus {
+  outline-color: #4dabf7;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #4a5568;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
