@@ -1,0 +1,6 @@
+com\nisum\MonolithApp\controller\UserController.class
+com\nisum\MonolithApp\controller\ProductController.class
+com\nisum\MonolithApp\model\Product.class
+com\nisum\MonolithApp\MonolithAppApplication.class
+com\nisum\MonolithApp\filter\RequestLoggingFilter.class
+com\nisum\MonolithApp\model\User.class
