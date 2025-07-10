@@ -1,0 +1,61 @@
+.button {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Size variations */
+.button-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.button-medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.button-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Variant-specific hover effects */
+.button-primary:hover {
+  opacity: 0.9;
+}
+
+.button-secondary:hover {
+  background-color: var(--surface-hover, rgba(0, 0, 0, 0.05));
+}
+
+.button-outline:hover {
+  background-color: var(--primary-alpha, rgba(0, 123, 255, 0.1));
+}
