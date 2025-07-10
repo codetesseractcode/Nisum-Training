@@ -1,0 +1,59 @@
+= Book API Documentation
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+== Overview
+
+The Book API provides endpoints for managing books in the system.
+
+== Getting a Book by ID
+
+=== Successful Response
+
+==== Request
+include::{snippets}/get-book-success/http-request.adoc[]
+
+==== Response
+include::{snippets}/get-book-success/http-response.adoc[]
+
+==== Path Parameters
+include::{snippets}/get-book-success/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/get-book-success/response-fields.adoc[]
+
+==== Example cURL Command
+include::{snippets}/get-book-success/curl-request.adoc[]
+
+=== Book Not Found
+
+When requesting a book that doesn't exist, the API returns a Problem Details response.
+
+==== Request
+include::{snippets}/get-book-not-found/http-request.adoc[]
+
+==== Response
+include::{snippets}/get-book-not-found/http-response.adoc[]
+
+==== Path Parameters
+include::{snippets}/get-book-not-found/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/get-book-not-found/response-fields.adoc[]
+
+==== Example cURL Command
+include::{snippets}/get-book-not-found/curl-request.adoc[]
+
+== Error Handling
+
+The API follows RFC 7807 Problem Details for HTTP APIs standard for error responses. All error responses include:
+
+- `type`: A URI reference identifying the problem type
+- `title`: A short, human-readable summary of the problem
+- `status`: The HTTP status code
+- `detail`: A human-readable explanation specific to this occurrence
+- `instance`: A URI reference identifying the specific occurrence
