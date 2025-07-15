@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .dashboard-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+        .welcome-message {
+            color: #28a745;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .dashboard-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>Dashboard</h1>
+            <div id="welcomeMessage" class="welcome-message">
+                Welcome to your dashboard! You have successfully logged in.
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="card">
+                <h3>Profile</h3>
+                <p>Manage your profile settings and personal information.</p>
+            </div>
+
+            <div class="card">
+                <h3>Reports</h3>
+                <p>View your reports and analytics.</p>
+            </div>
+
+            <div class="card">
+                <h3>Settings</h3>
+                <p>Configure your application preferences.</p>
+            </div>
+
+            <div class="card">
+                <h3>Help</h3>
+                <p>Get help and support documentation.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

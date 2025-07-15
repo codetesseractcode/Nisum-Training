@@ -1,0 +1,11 @@
+Requirement ID,Requirement Description,Test Case ID,Test Case Description,Test Class,Test Method,Expected Result,Status
+R1,User can log in,TC001,Valid login with correct credentials,LoginTest,testValidLogin,Pass,Active
+R1,User can log in,TC002,Invalid login with wrong password,LoginTest,testInvalidLoginWrongPassword,Pass,Active
+R1,User can log in,TC003,Invalid login with non-existent user,LoginTest,testInvalidLoginNonExistentUser,Pass,Active
+R2,User can reset password,TC004,Valid password reset with correct email,PasswordResetTest,testValidPasswordReset,Pass,Active
+R2,User can reset password,TC005,Invalid password reset with wrong email,PasswordResetTest,testInvalidPasswordResetWrongEmail,Pass,Active
+R2,User can reset password,TC006,Invalid password reset for non-existent user,PasswordResetTest,testInvalidPasswordResetNonExistentUser,Pass,Active
+R3,User can update profile,TC007,Valid profile update for existing user,ProfileUpdateTest,testValidProfileUpdate,Pass,Active
+R3,User can update profile,TC008,Invalid profile update for non-existent user,ProfileUpdateTest,testInvalidProfileUpdateNonExistentUser,Pass,Active
+R3,User can update profile,TC009,Profile update with empty profile information,ProfileUpdateTest,testProfileUpdateWithEmptyProfile,Pass,Active
+
