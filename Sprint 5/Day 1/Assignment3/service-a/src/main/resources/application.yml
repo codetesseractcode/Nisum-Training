@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ServiceA
+server:
+  port: 8083
+
+service:
+  b:
+    url: http://localhost:8081/api/protected-data
+  jwt:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZXJ2aWNlLWEiLCJyb2xlcyI6WyJST0xFX1NFUlZJQ0UiXSwiaWF0IjoxNjQwOTk1MjAwLCJleHAiOjE5NTYzNTUyMDB9.8Nip7g8VGHxGt8FMJ9QN8bFQCY5vK2sLzYrP5_6H5IY
+
+logging:
+  level:
+    com.service.a: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
